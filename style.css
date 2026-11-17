@@ -1,0 +1,32 @@
+:root { --bg:#fbfaf7; --card:#ffffff; --fg:#1f2328; --muted:#5d6670; --line:#dcd8cf; --accent:#2f7d5b; --accent-soft:#e6f2ec; --warn:#8a5a00; --warn-soft:#fff6e0; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg:#121513; --card:#1a1e1c; --fg:#e7ece9; --muted:#9aa49f; --line:#333a36; --accent:#6cc79b; --accent-soft:#1f2f27; --warn:#f0c060; --warn-soft:#2d2716; }
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif; line-height:1.85; }
+header.site { border-bottom:1px solid var(--line); background:var(--card); }
+header.site .in { max-width:760px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+header.site a.brand { font-weight:700; color:var(--fg); text-decoration:none; font-size:1.05rem; }
+header.site nav { margin-left:auto; display:flex; gap:14px; font-size:.88rem; }
+main { max-width:760px; margin:0 auto; padding:28px 16px 64px; }
+h1 { font-size:1.55rem; line-height:1.45; margin:0 0 6px; }
+h2 { font-size:1.15rem; margin:36px 0 10px; padding-bottom:4px; border-bottom:2px solid var(--accent-soft); }
+h3 { font-size:1rem; margin:22px 0 6px; }
+p, li, td, th { font-size:.97rem; }
+ul, ol { padding-left:1.4em; }
+a { color:var(--accent); }
+.meta { color:var(--muted); font-size:.85rem; margin:0 0 18px; }
+.pr { background:var(--warn-soft); color:var(--warn); border-radius:8px; padding:10px 12px; font-size:.86rem; margin:0 0 20px; }
+.note { background:var(--accent-soft); border-radius:8px; padding:12px 14px; margin:16px 0; }
+.cards { display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); padding:0; list-style:none; }
+.cards li { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px; }
+.cards a { font-weight:700; text-decoration:none; }
+.cards p { margin:6px 0 0; color:var(--muted); font-size:.88rem; }
+.tbl { overflow-x:auto; }
+table { border-collapse:collapse; width:100%; margin:10px 0; }
+th, td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+th { background:var(--accent-soft); }
+.src { font-size:.82rem; color:var(--muted); word-break:break-all; }
+footer.site { border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; }
+footer.site .in { max-width:760px; margin:0 auto; padding:18px 16px 40px; }
+footer.site a { color:var(--muted); margin-right:12px; }
