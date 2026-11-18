@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "version": 3,
+  "updatedAt": "2026-11-18",
+  "averages": {
+    "phone": {
+      "value": 9068,
+      "year": 2025,
+      "source": "総務省統計局 家計調査（家計収支編）2025年 二人以上の世帯 移動電話通信料（年額108,814円÷12）",
+      "url": "https://www.e-stat.go.jp/stat-search/files?tclass=000000330002&cycle=7&year=20250",
+      "byHousehold": {}
+    },
+    "fiber": {
+      "value": 2954,
+      "year": 2025,
+      "source": "総務省統計局 家計調査（家計収支編）2025年 二人以上の世帯 インターネット接続料（年額35,447円÷12）",
+      "url": "https://www.e-stat.go.jp/stat-search/files?tclass=000000330002&cycle=7&year=20250",
+      "byHousehold": {}
+    },
+    "power": {
+      "value": 13218,
+      "year": 2025,
+      "source": "総務省統計局 家計調査（家計収支編）2025年 二人以上の世帯 電気代",
+      "url": "https://www.e-stat.go.jp/stat-search/files?tclass=000000330002&cycle=7&year=20250",
+      "byHousehold": {
+        "2": 12144
+      }
+    },
+    "insurance": {
+      "value": 29416,
+      "year": 2024,
+      "source": "生命保険文化センター 2024（令和6）年度 生命保険に関する全国実態調査 世帯の年間払込保険料（35.3万円÷12）",
+      "url": "https://www.jili.or.jp/research/report/9849.html",
+      "byHousehold": {}
+    }
+  },
+  "estimates": {
+    "savingsByHousehold": {
+      "1": 3000,
+      "2": 5000,
+      "3": 6000,
+      "4": 7000
+    },
+    "note": "price-sources.md §3"
+  },
+  "constants": {
+    "renewableSurchargeYen": 4.18,
+    "renewableSurchargeFiscalYear": 2026,
+    "renewableSurchargeUrl": "https://www.enecho.meti.go.jp/category/saving_and_new/saiene/kaitori/"
+  },
+  "providers": [
+    {
+      "id": "ahamo",
+      "kind": "phone",
+      "name": "ahamo",
+      "kana": "あはも",
+      "officialUrl": "https://ahamo.com/",
+      "linkKey": "ahamo"
+    },
+    {
+      "id": "mineo",
+      "kind": "phone",
+      "name": "mineo",
+      "kana": "みねお",
+      "officialUrl": "https://mineo.jp/",
+      "linkKey": "mineo"
+    },
+    {
+      "id": "docomo-hikari",
+      "kind": "fiber",
+      "name": "ドコモ光",
+      "kana": "どこもひかり",
+      "officialUrl": "https://www.docomo.ne.jp/hikari/"
+    },
+    {
+      "id": "enhikari",
+      "kind": "fiber",
+      "name": "enひかり",
+      "kana": "えんひかり",
+      "officialUrl": "https://enhikari.jp/"
+    },
+    {
+      "id": "linemo",
+      "kind": "phone",
+      "name": "LINEMO",
+      "kana": "らいんも",
+      "officialUrl": "https://www.linemo.jp/",
+      "linkKey": "linemo"
+    }
+  ],
+  "plans": [
+    {
+      "id": "ahamo-basic",
+      "providerId": "ahamo",
+      "kind": "phone",
+      "name": "ahamo",
+      "phone": {
+        "tiers": [
+          {
+            "gb": 30,
+            "yen": 2970
+          },
+          {
+            "gb": 110,
+            "yen": 4950
+          }
+        ],
+        "callOption5min": 0,
+        "callOptionUnlimited": 1100,
+        "minTermMonths": 0,
+        "initialFee": 0
+      },
+      "sourceUrl": "https://ahamo.com/plan/",
+      "fetchedAt": "2026-11-18",
+      "note": "5分以内の国内通話は無料。110GBの大盛りオプションは2026年11月30日で終了予定"
+    },
+    {
+      "id": "mineo-mypita",
+      "providerId": "mineo",
+      "kind": "phone",
+      "name": "マイピタ（デュアル）",
+      "phone": {
+        "tiers": [
+          {
+            "gb": 3,
+            "yen": 1298
+          },
+          {
+            "gb": 7,
+            "yen": 1518
+          },
+          {
+            "gb": 15,
+            "yen": 1958
+          },
+          {
+            "gb": 30,
+            "yen": 2178
+          },
+          {
+            "gb": 50,
+            "yen": 2948
+          }
+        ],
+        "callOption5min": 550,
+        "callOptionUnlimited": 1210,
+        "minTermMonths": 0,
+        "initialFee": 3850
+      },
+      "sourceUrl": "https://mineo.jp/charge/",
+      "fetchedAt": "2026-11-18",
+      "note": "通話は10分かけ放題（550円）を5分以内の目安に使用"
+    },
+    {
+      "id": "docomo-hikari-a",
+      "providerId": "docomo-hikari",
+      "kind": "fiber",
+      "name": "ドコモ光 1ギガ タイプA（2年定期あり）",
+      "fiber": {
+        "monthly": {
+          "house": 5720,
+          "mansion": 4400
+        },
+        "minTermMonths": 24,
+        "initialFee": 4950
+      },
+      "sourceUrl": "https://www.docomo.ne.jp/hikari/charge/",
+      "fetchedAt": "2026-11-18",
+      "note": "プロバイダ込み。ブロードバンドユニバーサルサービス料は含まない。定期契約なしは戸建て7,370円・マンション5,500円"
+    },
+    {
+      "id": "enhikari",
+      "providerId": "enhikari",
+      "kind": "fiber",
+      "name": "enひかり",
+      "fiber": {
+        "monthly": {
+          "house": 4620,
+          "mansion": 3520
+        },
+        "minTermMonths": 0,
+        "initialFee": 3300
+      },
+      "sourceUrl": "https://enhikari.jp/",
+      "fetchedAt": "2026-11-18",
+      "note": "最低利用期間なし。工事費は現在無料キャンペーン中"
+    },
+    {
+      "id": "linemo-best",
+      "providerId": "linemo",
+      "kind": "phone",
+      "name": "LINEMO ベストプラン／ベストプランV",
+      "phone": {
+        "tiers": [
+          {
+            "gb": 3,
+            "yen": 990
+          },
+          {
+            "gb": 10,
+            "yen": 2090
+          },
+          {
+            "gb": 30,
+            "yen": 2970
+          }
+        ],
+        "callOption5min": 550,
+        "callOptionUnlimited": 1650,
+        "minTermMonths": 0,
+        "initialFee": 0
+      },
+      "sourceUrl": "https://www.linemo.jp/plan/",
+      "fetchedAt": "2026-11-18",
+      "note": "3GB・10GBはベストプラン、30GBはベストプランV。通話定額はベストプランVでは1,100円。通話オプションは契約から7か月目まで割引キャンペーンあり（含めていません）"
+    }
+  ]
+}

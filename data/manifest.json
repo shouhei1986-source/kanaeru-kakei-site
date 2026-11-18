@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "prices": {
+    "version": 3,
+    "url": "data/prices-v3.json",
+    "sha256": "a764c7cf62c595916cc3918a43dc86ce28c1c9b554a4a7a6ed92c38f6c3cc2f8",
+    "minAppBuild": 1
+  },
+  "links": {
+    "version": 2,
+    "url": "data/links-v2.json",
+    "sha256": "33371ea6cc49cf9464d9e5623402b4b16fc115acdd22dd241b861ecc487d3193"
+  }
+}
